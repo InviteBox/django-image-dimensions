@@ -15,7 +15,7 @@ else:
 
 setup(
     name = "django-image-dimensions",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Alexander Tereshkin",
     author_email = "atereshkin@invitebox.com",
     description = ("Automatically add dimension attributes to all <img> tags in a response to improve rendering speed on the client. "),
@@ -24,7 +24,7 @@ setup(
     url = "https://github.com/InviteBox/django-image-dimensions",
     packages=['imagedimensions',],
     long_description=long_description,
-    install_requires=('pymongo',),
+    install_requires=('django-celery', ),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Software Development",
