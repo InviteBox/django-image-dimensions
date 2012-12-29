@@ -8,14 +8,14 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-if os.path.exists('README.md'):
-    long_description = read('README.md')
+if os.path.exists('README.rst'):
+    long_description = read('README.rst')
 else:
     long_description = 'https://github.com/InviteBox/django-image-dimensions'
 
 setup(
     name = "django-image-dimensions",
-    version = "0.0.2",
+    version = "0.0.3",
     author = "Alexander Tereshkin",
     author_email = "atereshkin@invitebox.com",
     description = ("Automatically add dimension attributes to all <img> tags in a response to improve rendering speed on the client. "),
