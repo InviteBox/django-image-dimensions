@@ -20,7 +20,7 @@ Specifying image dimensions in HTML improves both percieved and actual client-si
 
 ##Usage
 For a quick test-drive add `'imagedimensions.middleware.ImageDimensionsMiddleware'` to `MIDDLEWARE_CLASSES`. 
-However, this is not suitable for production use as it adds an overhead to every request. For production, replace `{% load cache %}` in our templates with `{% load imgdimensions %}`.
+However, this is not suitable for production use as it adds an overhead to every request. For production, replace `{% load cache %}` in your templates with `{% load imgdimensions %}`.
 
 
 
