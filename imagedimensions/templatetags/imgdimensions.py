@@ -30,10 +30,12 @@ class CacheNode(Node):
         cache_key = 'template.cache.%s.%s' % (self.fragment_name, args.hexdigest())
         value = cache.get(cache_key)
         if value is None:
-            print 'MISS'
             value = self.nodelist.render(context)
-            value, dimensions_found = add_dimensions(value, context['request'].build_absolute_uri())
-            print dimensions_found
+            req = context.get('request', None)
+            if req:
+                value, dimensions_found = add_dimensions(value, req.build_absolute_uri())
+            else:
+                dimensions_found = False
             if dimensions_found:
                 cache.set(cache_key, value, expire_time)
         return value
