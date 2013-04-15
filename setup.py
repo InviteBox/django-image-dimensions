@@ -15,14 +15,14 @@ else:
 
 setup(
     name = "django-image-dimensions",
-    version = "0.0.3",
+    version = "0.0.4",
     author = "Alexander Tereshkin",
     author_email = "atereshkin@invitebox.com",
     description = ("Automatically add dimension attributes to all <img> tags in a response to improve rendering speed on the client. "),
     license = "BSD",
     keywords = "django images performance",
     url = "https://github.com/InviteBox/django-image-dimensions",
-    packages=['imagedimensions',],
+    packages=['imagedimensions','imagedimensions.templatetags'],
     long_description=long_description,
     install_requires=('django-celery', ),
     classifiers=[
